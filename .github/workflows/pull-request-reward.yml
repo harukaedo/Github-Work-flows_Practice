@@ -19,6 +19,7 @@ jobs:
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           COMMIT_MESSAGE: ${{ github.event.pull_request.head.ref }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PRAISE_MESSAGES=(
             "Pushお疲れ様でした！"
@@ -42,5 +43,3 @@ jobs:
 
           # ghコマンドでPRにコメントを投稿
           echo "$COMMENT_BODY" | gh pr comment $PR_NUMBER --body-file -
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
