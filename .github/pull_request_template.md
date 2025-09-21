@@ -1,7 +1,7 @@
 ## 概要
 
-Fix bizreach-inc/cwr#
-Fix bizreach-inc/biz-cre-issues#
+harukaedo/#
+harukaedo/#
 
 ## テスト観点
 
