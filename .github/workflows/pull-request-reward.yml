@@ -33,12 +33,12 @@ jobs:
             COMMIT_MESSAGE=$(git log -1 --pretty=%B)
           fi
 
-          COMMENT_BODY="🎊 **${RANDOM_MESSAGE}**\n\n"
           COMMENT_BODY+="**${PR_TITLE}**\n"
+          COMMENT_BODY="**${RANDOM_MESSAGE}**"
 
           # コミットメッセージが取得できたら追加
           if [[ -n "$COMMIT_MESSAGE" ]]; then
-            COMMENT_BODY+="**最新のコミット:**\n> ${COMMIT_MESSAGE}\n"
+            COMMENT_BODY+="${COMMIT_MESSAGE}"
           fi
 
           # ghコマンドでPRにコメントを投稿
