@@ -38,7 +38,7 @@ jobs:
 
           # コミットメッセージが取得できたら追加
           if [[ -n "$COMMIT_MESSAGE" ]]; then
-            COMMENT_BODY+="**最新のコミット:**\n> ${COMMIT_MESSAGE}\n"
+            COMMENT_BODY+="${COMMIT_MESSAGE}"
           fi
 
           # ghコマンドでPRにコメントを投稿
